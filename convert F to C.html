@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Covert F to C</title>
+</head>
+<body>
+<h3>Temperature Converter</h3>
+<form action="">
+<p>Type a value in th Fehrenheit field to convert the value to Celcius:</p>
+Fahrenheit: <input type="number" id="num" oninput="covert(this.val)" onchange="covert(this.val)"> <br>
+<p>Celcius: <span id="result"></span></p>
+</form>
+<script>
+    function covert(val){
+        val = parseFloat(document.getElementById('num').value);
+        document.getElementById('result').innerHTML = (val-32)/1.8;
+        console.log(val);
+    }
+    covert(5)
+</script>
+</body>
+</html>
